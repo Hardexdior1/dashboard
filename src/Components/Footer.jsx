@@ -1,5 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import dribble from "../Images/dribbble-icon 1.png"
+import instagram from "../Images/instagram-glyph-1 1.png"
+import twitter from "../Images/Vector (11).png"
+import linkdn from "../Images/linkedin-icon-1 1.png"
+import facebook from "../Images/Vector (10).png"
+import behance from "../Images/behance 1.png"
+
+
+
+
+
+
 
 const Footer = () => {
   return (
@@ -15,13 +27,30 @@ const Footer = () => {
 
 
 
-
-        <div className="enquires">
+<div>
+    
+<div className="enquires">
         <h6>ANY ENQUIRES? VISIT US ON </h6>
         <h6>
           <Link>www.nickeflox.com</Link>
         </h6>
       </div>
+
+      <div className="flexFooterImg">
+    <img src={dribble} alt="dribble-img" />
+    <img src={instagram} alt="instagram-img" />
+    <img src={twitter} alt="twitter-img" />
+    <img src={linkdn} alt="lindkn-img" />
+    <img src={facebook} alt="facebook-img" />
+    <img src={behance} alt="behance-img" />
+
+
+
+
+
+
+      </div>
+</div>
       </footer>
 
       

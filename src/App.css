@@ -108,3 +108,9 @@ footer {
     padding: 30px 4%;
   }
 }
+.flexFooterImg{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 25px;
+}
