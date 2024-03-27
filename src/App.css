@@ -7,15 +7,7 @@
   padding: 10px 2%;
 }
 
-@media (max-width: 666px) {
-  .padding {
-    padding: 10px 3.3%;
-  }
-  footer{
-    padding: 10px 3.3%;
 
-  }
-}
 .flexSideAndSection {
   display: grid;
   grid-template-columns: 0.5fr 4fr;
@@ -111,3 +103,12 @@ footer {
   -webkit-text-fill-color: transparent;
 
 }
+@media (max-width: 666px) {
+    .padding {
+      padding: 10px 3.3%;
+    }
+    footer{
+      padding: 10px 3.3%;
+  
+    }
+  }
