@@ -38,13 +38,20 @@ const Chart1 = () => {
 
   return (
     <div className="barWrap">
-      <LineChart height={200} width={450} data={data}>
+      {window.innerWidth>799?  <LineChart height={200} width={600} data={data}>
         <Line type="monotone" dataKey="react" stroke="#5041BC" strokeWidth={3}  />
         <Line type="monotone" dataKey="angular" stroke="#EA8F95" strokeWidth={3} />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-      </LineChart>
+      </LineChart>: <LineChart height={200} width={200} data={data}>
+        <Line type="monotone" dataKey="react" stroke="#5041BC" strokeWidth={3}  />
+        <Line type="monotone" dataKey="angular" stroke="#EA8F95" strokeWidth={3} />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+      </LineChart>}
+     
     </div>
   );
 };
