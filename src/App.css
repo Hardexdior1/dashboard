@@ -7,7 +7,6 @@
   padding: 10px 2%;
 }
 
-
 .flexSideAndSection {
   display: grid;
   grid-template-columns: 0.5fr 4fr;
@@ -74,10 +73,9 @@ footer h2 {
   font-size: 30px;
 }
 footer {
-    padding: 40px 2%;
-
-  background: #E5E5E5;
-
+  padding: 40px 2%;
+  margin-top: 40px;
+  background: #e5e5e5;
 }
 .enquires h6 {
   margin-bottom: 0;
@@ -96,19 +94,17 @@ footer {
   color: #5041bc;
 }
 .span1 {
-    /* font-size: 30px; */
+  /* font-size: 30px; */
   background: -webkit-linear-gradient(#5041bc, #d434fe);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 @media (max-width: 666px) {
-    .padding {
-      padding: 10px 3.3%;
-    }
-    footer{
-      padding: 10px 3.3%;
-  
-    }
+  .padding {
+    padding: 10px 4%;
   }
+  footer {
+    padding: 30px 4%;
+  }
+}
