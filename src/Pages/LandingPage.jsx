@@ -6,6 +6,7 @@ import Representatives from "../Pages/Representatives";
 import Cards from "./Cards";
 import Chart1 from "./Chart1";
 import SideBar from "./SideBar";
+import Footer from "../Components/Footer";
 const LandingPage = () => {
   const [representativeData, setRepresentativeData] = useState(data);
 
@@ -48,7 +49,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="flexSideAndSection">
+  <div> <div className="flexSideAndSection">
       <SideBar showSideBar={showSideBar} toggle={toggle} />
       <div className="all">
         <Nav handleSearchChange={handleSearchChange} toggle={toggle} />
@@ -93,6 +94,10 @@ const LandingPage = () => {
         <Cards />
       </div>
     </div>
+
+
+    <Footer />
+    </div> 
   );
 };
 
