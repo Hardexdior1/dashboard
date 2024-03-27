@@ -1,37 +1,97 @@
-import React from "react";
-import Section1 from "../Components/Section1";
-import Section2 from "../Components/Section2";
-import Section3 from "../Components/Section3";
-import Section4 from "../Components/Section4";
-import Section5 from "../Components/Section5";
-import Section6 from "../Components/Section6";
-import Section7 from "../Components/Section7";
-import CarouselReview from '../Components/CarouselReview'
-import News from "../Components/News";
-import TestingRemove from "../Components/TestingRemove";
-// import BuySell from "../Components/BuySell";
-// import Sellbuy from "../Components/Sellbuy";
+import React, { useEffect, useState } from "react";
+import Nav from "../Components/Nav";
+import data from "../RepreSentaTivesData/Data";
 
+import Representatives from "../Pages/Representatives";
+import Cards from "./Cards";
+import Chart1 from "./Chart1";
+import SideBar from "./SideBar";
+const LandingPage = () => {
+  const [representativeData, setRepresentativeData] = useState(data);
 
-const LandingPage = ({rate}) => {
-  
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const remove = (item) => {
+    const newItems = representativeData.filter(
+      (represent) => represent.id !== item.id
+    );
+    setRepresentativeData(newItems);
+  };
+  const [searchTerm, setSearchTerm] = useState("");
+  const [result, setResult] = useState("");
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+
+    let matchingItems = [];
+    if (e.target.value.trim() !== "") {
+      matchingItems = data.filter((item) =>
+        item.name.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+    } else {
+      matchingItems = data;
+    }
+
+    if (matchingItems.length === 0 && e.target.value !== "") {
+      setResult(`No results found for "${e.target.value}"`);
+    } else {
+      setResult("");
+    }
+
+    setRepresentativeData(matchingItems);
+  };
+
+  const [showSideBar, setShowSideBar] = useState(false);
+  const toggle = () => {
+    setShowSideBar(!showSideBar);
+  };
+
   return (
-    <div>
-    {/* <a href="">hello</a> */}
-      
-      
-      <Section1 />
-      {/* <Section2  rates={rate}/> */}
-        <Section3 /> 
-       <Section4 /> 
-      <Section5 />
-      <News />
-      <CarouselReview />
-      <Section7 /> 
-      {/* <TestingRemove />   */}
+    <div className="flexSideAndSection">
+      <SideBar showSideBar={showSideBar} toggle={toggle} />
+      <div className="all">
+        <Nav handleSearchChange={handleSearchChange} toggle={toggle} />
+        <h5 className="top">Top Sales Representatives </h5>
+        <div>
+          {representativeData.map((item) => {
+            return (
+              <div>
+                <Representatives
+                  result={result}
+                  key={item.id}
+                  {...item}
+                  remove={() => {
+                    remove(item);
+                  }}
+                />
+              </div>
+            );
+          })}
 
-     
+          <center style={{ color: "red" }}>
+            <small>{result} </small>
+          </center>
+
+          {representativeData.length < 1 ? (
+            <center>
+              <button
+                className="restore"
+                onClick={() => {
+                  setRepresentativeData(data);
+                  setResult("");
+                  setSearchTerm("");
+                }}>
+                Restore Representatives
+              </button>
+            </center>
+          ) : (
+            ""
+          )}
+        </div>
+
+        <Cards />
+      </div>
     </div>
   );
 };

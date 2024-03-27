@@ -1,0 +1,111 @@
+.name{
+    text-transform: capitalize;
+}
+
+.top{
+    color: #04103B;
+    font-family: sans-serif;
+    padding-left: 5%;
+}
+
+.flexRepresentative{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* text-align:center; */
+    border:  1px solid #EBE8FF;
+    padding: 5px 30px ;
+    border-radius: 1.2rem;
+    text-align: left;
+
+
+}
+
+.flexImgAndName{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+}
+
+
+.representativeWrap{
+    /* padding: 10px 50px; */
+   /* max-width: 600px; */
+
+}
+@media (max-width:800px) {
+    .flexRepresentative{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr  ;
+        gap: 10px;
+        /* padding: 15px 30px; */
+    }
+    .flexImgAndName{
+        gap: 15px;
+    }
+    /* .representativeWrap{
+        padding: 10px 30px;
+    } */
+
+}
+.flexRepresentative p{
+color: #797D8C;
+font-size: 14px;
+
+}
+.flexRepresentative b:nth-child(1){
+    font-size: 16px;
+}
+.medal1{
+text-transform: capitalize;
+font-weight: bolder;
+color:  #F7941D;
+list-style-type: none;
+font-size: 14px;
+}
+.medal2{
+    list-style-type: none;
+    font-size: 14px;
+    color:  #43BE83;
+    text-transform: capitalize;
+}
+.buttonWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+}
+.buttonWrap b{
+    height: 3px;
+    width: 3px;
+    background-color: #5041BC;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.flexRemove{
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.small{
+    cursor: pointer;
+}
+
+.restore{
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+    padding: 10px 20px ;
+    cursor: pointer;
+}
+
+
+/* cards css */
+

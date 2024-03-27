@@ -1,0 +1,95 @@
+.sideWrap {
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  padding: 30px 10px ;
+  border-bottom: 0.1px solid #ebe8ff;
+}
+.img1 {
+  margin-right: -17px;
+  height: 28px;
+  width: 28px;
+}
+.img2 {
+  height: 38px;
+  width: 38px;
+}
+.logo {
+  margin-left: -32px;
+  width: 80px;
+}
+
+
+.sideWrap {
+  padding: 30px 10px;
+  display: grid;
+  gap: 40px;
+  background-color: #5041bc;
+  transition: 0.6s;
+
+}
+
+.flexLinkAndImg1{
+    display: flex;
+    gap: 25px;
+    /* background-color: white; */
+    padding: 10px 15px;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.flexLinkAndImg{
+    display: flex;
+    gap: 25px;
+    background-color: white;
+    padding: 10px 15px;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+.flexLinkAndImg img{
+    height: fit-content;
+}
+.flexLinkAndImg1 img{
+    height: fit-content;
+
+}
+.flexLinkAndImg a{
+    text-decoration: none;
+    color: #5041bc;
+    font-size: 15px;
+}
+.flexLinkAndImg1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+.rocketDiv{
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-block;
+    flex-direction: column;
+margin-top: 100px;
+}
+.rocketDiv small{
+    color: #263156;
+  
+}
+.rocketDiv button{
+    padding: 8px 12px;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    background-color: #FF8057;
+    cursor: pointer;
+    margin-top: 13px;
+
+}
